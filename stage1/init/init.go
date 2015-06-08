@@ -225,7 +225,7 @@ func getNspawnArgsEnv(p *Pod, debug bool) ([]string, []string, error) {
 	// path from within the stage1 rootfs, to avoid loading host
 	// libraries, or worse not finding libraries on the host,
 	// whilst present in the stage1 rootfs.
-	if (p.Stage1Options.interpBin != "" && p.Stage1Options.interpPath != "") {
+	if p.Stage1Options.interpBin != "" && p.Stage1Options.interpPath != "" {
 		args = append(args, filepath.Join(common.Stage1RootfsPath(p.Root), p.Stage1Options.interpBin))
 		args = append(args, "--library-path")
 		args = append(args, filepath.Join(common.Stage1RootfsPath(p.Root), p.Stage1Options.interpPath))

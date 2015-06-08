@@ -64,16 +64,16 @@ const (
 	interpPathEntrypoint = "coreos.com/rkt/stage1/ld-path"
 	shimEntrypoint       = "coreos.com/rkt/stage1/shim"
 	// flavor could be dropped in favor of piggy-backing onto lack of shim ?!
-	flavorEntrypoint     = "coreos.com/rkt/stage1/flavor"
+	flavorEntrypoint = "coreos.com/rkt/stage1/flavor"
 )
 
 type Stage1Option struct {
-	nspawnBin string
-	systemdversion string
-	interpBin string
-	interpPath string
-	shimPath string
-	flavor string
+	nspawnBin                     string
+	systemdversion                string
+	interpBin                     string
+	interpPath                    string
+	shimPath                      string
+	flavor                        string
 	systemdSupportsJournalLinking bool
 }
 
